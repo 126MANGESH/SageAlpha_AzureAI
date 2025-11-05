@@ -1,0 +1,112 @@
+# =====================================================
+# SAGEALPHA.AI - Python + Flask + Azure OpenAI Project
+# Secure .gitignore
+# =====================================================
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Build / distribution
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.pdm-python
+.pdm-build/
+.pixi
+
+# Local settings and secrets
+*.env
+.envrc
+.env.local
+config.json
+secrets.json
+*.key
+*.pem
+*.pfx
+*.cer
+
+# Logs / Debug / Databases
+*.log
+*.out
+*.err
+instance/
+.webassets-cache
+*.sqlite3
+*.db
+db.sqlite3*
+nohup.out
+
+# Flask
+__flask_cache__/
+flask_session/
+.cache/
+
+# Tests / Coverage
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py.cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# IDEs and editors
+.vscode/
+.idea/
+.spyderproject
+.spyproject
+.ropeproject
+.pyre/
+.pytype/
+.mypy_cache/
+.dmypy.json
+cython_debug/
+.ruff_cache/
+
+# Documentation / build tools
+docs/_build/
+.pybuilder/
+target/
+.site/
+htmlcov/
+
+# Notebooks
+.ipynb_checkpoints
+
+# Misc
+*.bak
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
