@@ -40,6 +40,21 @@
             text-align: center;
         }
         
+        .header button {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid white;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        .header button:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
         .chat-box {
             flex: 1;
             overflow-y: auto;
@@ -173,6 +188,7 @@
         <div class="header">
             <h1>SageAlpha.ai</h1>
             <p>For Finance Query</p>
+            <button onclick="clearChat()">Clear Chat</button>
         </div>
         
         <div class="chat-box" id="chatBox"></div>
@@ -248,6 +264,11 @@
             messageDiv.appendChild(contentDiv);
             chatBox.appendChild(messageDiv);
             chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function clearChat() {
+            chatBox.innerHTML = '';
+            conversationHistory = [];
         }
 
         messageInput.addEventListener('keypress', (e) => {
