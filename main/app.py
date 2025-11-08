@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 from azure.identity import DefaultAzureCredential
 from azure.ai.projects import AIProjectClient
 from azure.ai.agents.models import ListSortOrder
+from waitress import serve
 
 # ==========================================================
 # INITIAL SETUP
@@ -172,4 +173,5 @@ if __name__ == "__main__":
     port = int(os.getenv("PORT", 5000))
     debug = os.getenv("FLASK_ENV") == "development"
     logger.info(f"🚀 SageAlpha.ai running on http://localhost:{port}")
-    app.run(host="0.0.0.0", port=port, debug=debug)
+    app.run(host="0.0.0.0", port=5000, debug=True, use_reloader=False)
+    serve(app, host="0.0.0.0", port=5000)
